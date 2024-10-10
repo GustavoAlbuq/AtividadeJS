@@ -1,0 +1,20 @@
+let tarefas = [];
+
+for (let i = 0; i < 5; i++) {
+    let tarefa = prompt(`Digite a tarefa ${i + 1}:`);
+    tarefas.push(tarefa);
+}
+
+console.log("Tarefas:");
+tarefas.forEach((tarefa, index) => {
+    console.log(`${index + 1}: ${tarefa}`);
+});
+
+let tarefaConcluida = prompt("Digite o número da tarefa que deseja marcar como concluída:");
+
+tarefas.splice(tarefaConcluida - 1, 1);
+
+console.log("Lista de tarefas atualizada:");
+tarefas.forEach((tarefa, index) => {
+    console.log(`${index + 1}: ${tarefa}`);
+});
