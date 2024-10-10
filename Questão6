@@ -1,0 +1,18 @@
+let pessoas = [];
+
+for (let i = 0; i < 5; i++) {
+    let nome = prompt(`Digite o nome da pessoa ${i + 1}:`);
+    let idade = prompt(`Digite a idade de ${nome}:`);
+    pessoas.push({ nome: nome, idade: Number(idade) });
+}
+
+function verificarMaiorDeIdade(pessoas) {
+    console.log("Pessoas maiores de 18 anos:");
+    pessoas.forEach(pessoa => {
+        if (pessoa.idade > 18) {
+            console.log(pessoa.nome);
+        }
+    });
+}
+
+verificarMaiorDeIdade(pessoas);
