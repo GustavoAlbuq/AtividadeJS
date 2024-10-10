@@ -1,0 +1,15 @@
+let produtos = [
+    { nome: "Produto A", preco: 10, quantidade: 5 },
+    { nome: "Produto B", preco: 20, quantidade: 3 },
+    { nome: "Produto C", preco: 15, quantidade: 8 }
+];
+
+function valorTotalEstoque(produtos) {
+    let valorTotal = 0;
+    produtos.forEach(produto => {
+        valorTotal += produto.preco * produto.quantidade;
+    });
+    return valorTotal;
+}
+
+console.log(`O valor total do estoque é: R$ ${valorTotalEstoque(produtos)}`);
